@@ -1,16 +1,8 @@
-import optparse
+#!usr/bin/env python
 import argparse
 import scapy.all as sc
-
-def args():
-    parser=optparse.OptionParser()
-    parser.add_option('-t', '--target',dest='ip',help='please enter the target address')
-    [options, args]=parser.parse_args()
-    if not options.ip:
-        parser.error('Enter ip address')
-    return options
     
-def latest_args():#latest and generally used
+def latest_args():
     parser=argparse.ArgumentParser()
     parser.add_argument('-t', '--target',dest='ip',help='please enter the target address')
     options=parser.parse_args()
@@ -42,5 +34,3 @@ def results(res_dict):
 
 if __name__ == "__main__":
     results(scan(latest_args().ip))
-
-#results(scan('192.168.0.1/24'))
