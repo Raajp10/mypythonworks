@@ -1,5 +1,5 @@
 #! /usr/bin/eny python 
-# upper line called shubangu 
+ 
 
 import subprocess
 import optparse
